@@ -43,10 +43,10 @@ router.post("/notes", (req, res) => {
   
       console.log(response);
       res.json(response);
-    else {
+   
       res.json('Error in posting notes'),
     
-         };
+         
             // res.json(array)//
             app.get('/api/notes', (req, res) => {
                 // Inform the client
