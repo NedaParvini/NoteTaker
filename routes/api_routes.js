@@ -23,9 +23,7 @@ router.post("/notes", (req, res) => {
             // Add a new review
             parsenote.push(newnote);
            
-            //     * Array should be in a variable
-
-            // 2. Add new note from req.body
+             // Add new note from req.body
             //     * Push the object  from req.body to the array
 
             // 3. Write the new array into the db.json file
@@ -38,16 +36,26 @@ router.post("/notes", (req, res) => {
         );
             }
     });
-
-            // 4. res.json(array)//
+    const response = {
+        status: 'success',
+        body: newnote,
+      };
+  
+      console.log(response);
+      res.json(response);
+    else {
+      res.json('Error in posting notes'),
+    
+         };
+            // res.json(array)//
             app.get('/api/notes', (req, res) => {
                 // Inform the client
                 res.json(`${req.method} request received `);
               
                 // Log our request to the terminal
                 console.info(`${req.method} request received `);
-              });
-              
-        
+            });
+                
+             
 });
 module.exports = router;
