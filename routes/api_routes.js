@@ -34,16 +34,20 @@ router.post("/notes", (req, res) => {
           (writeErr) =>
             writeErr
               ? console.error(writeErr)
-              : console.info('Successfully updated notes!')
+              : console.info('Successfully updated notes!'),
         );
-      }
+            }
     });
 
-            // 4. res.json(array)
-
-        }
-    })
-
-
+            // 4. res.json(array)//
+            app.get('/api/notes', (req, res) => {
+                // Inform the client
+                res.json(`${req.method} request received `);
+              
+                // Log our request to the terminal
+                console.info(`${req.method} request received `);
+              });
+              
+        
 });
 module.exports = router;
