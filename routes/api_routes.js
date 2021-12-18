@@ -67,7 +67,7 @@ router.post("/notes", (req, res) => {
 
     });
     // DELETE 
- app.delete("/notes/:id", function (req, res) {
+ router.delete("/notes/:id", function (req, res) {
     fs.readFile("db/db.json", "utf8", (err, data) => {
         if (err) throw err;
 
