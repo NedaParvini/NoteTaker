@@ -13,7 +13,7 @@ npm install to install the required npm package.
 
 ## Functionality:
 
-Usage of GET and POST are so important for this challeng.
+Usage of GET and POST are so important for this challenge.
 Read, Write and Delete Functions are the most important part of the coding.
 Also adding new note from req.body, push the object from req.body to the array
 and Write the new array into the db.json file. 
