@@ -5,8 +5,11 @@ This is a Note Taker that can be used to add some Notes and Delete them.
 ## Installation:
 
 Creating the Repository, Clone it.
+
 Node.js is required to run.
+
 npm install to install the required npm package.
+
 
 ## Functionality:
 
@@ -20,5 +23,7 @@ I also created a Video of run process in Terminal and localhost.
 ## Features:
 
 *JavaScript
+
 *Node.js
+
 *Express
