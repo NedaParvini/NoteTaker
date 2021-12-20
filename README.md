@@ -18,7 +18,7 @@ Read, Write and Delete Functions are the most important part of the coding.
 Also adding new note from req.body, push the object from req.body to the array
 and Write the new array into the db.json file. 
 Then we have to run the node.js file and see the result in localhost
-I also created a Video of run process in Terminal and localhost.
+I also created a Video which shows the process of running in Terminal and localhost.
 
 ## Features:
 
