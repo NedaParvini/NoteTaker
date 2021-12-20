@@ -5,19 +5,20 @@ This is a Note Taker that can be used to add some Notes and Delete them.
 ## Installation:
 
 Creating the Repository, Clone it.
-Node.js is required to run 
-npm install to install the required npm package
+Node.js is required to run.
+npm install to install the required npm package.
 
 ## Functionality:
 
-GET and POST method are considered to this codes. 
-Read, Write and Delete Functions.
-The way we choose to use JSON is importatant too, how to use strings, objects and Array.
-then run the node.js file and see the result in localhost
-The way that we defines variables and usage of 
+Usage of GET and POST are so important for this challeng.
+Read, Write and Delete Functions are the most important part of the coding.
+Also adding new note from req.body, push the object from req.body to the array
+and Write the new array into the db.json file. 
+Then we have to run the node.js file and see the result in localhost
+I also created a Video of run process in Terminal and localhost.
 
 ## Features:
 
-JavaScript
-Node.js
-Express
+*JavaScript
+*Node.js
+*Express

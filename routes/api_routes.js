@@ -37,7 +37,7 @@ router.post("/notes", (req, res) => {
             // Add new note from req.body
             //     * Push the object  from req.body to the array
 
-            // 3. Write the new array into the db.json file
+            //Write the new array into the db.json file
             fs.writeFile('./db/db.json',
                 JSON.stringify(parsenote, null, 4),
                 (writeErr) =>
