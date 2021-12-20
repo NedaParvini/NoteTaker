@@ -17,57 +17,57 @@ router.post("/notes", (req, res) => {
     console.log(req.body);
     console.log("headrout");
     // Destructuring assignment for the items in req.body
-  const { title, text } = req.body;
-        // Variable for the object we will save
-        const newnote = {
-            title,
-            text,
+    const { title, text } = req.body;
+    // Variable for the object we will save
+    const newnote = {
+        title,
+        text,
 
-        };
-        fs.readFile('./db/db.json', 'utf8', (err, data) => {
-            if (err) {
-                console.error(err);
-            } else {
-                //Create variable = JSON.parse(data) so that we can use it as a JS object (array)//
-                const parsenote = JSON.parse(data);
-                console.log(data);
-                // Add a new review
-                parsenote.push(newnote);
+    };
+    fs.readFile('./db/db.json', 'utf8', (err, data) => {
+        if (err) {
+            console.error(err);
+        } else {
+            //Create variable = JSON.parse(data) so that we can use it as a JS object (array)//
+            const parsenote = JSON.parse(data);
+            console.log(data);
+            // Add a new review
+            parsenote.push(newnote);
 
-                // Add new note from req.body
-                //     * Push the object  from req.body to the array
+            // Add new note from req.body
+            //     * Push the object  from req.body to the array
 
-                // 3. Write the new array into the db.json file
-                fs.writeFile('./db/db.json',
-                    JSON.stringify(parsenote, null, 4),
-                    (writeErr) =>
-                        writeErr
-                            ? console.error(writeErr)
-                            : console.info('Successfully updated notes!'),
-                )
-                res.json(newnote)
-            }
-        });
-
-
-       
-
-       
-
-
-        // res.json(array)//
-        router.get('/api/notes', (req, res) => {
-            // Inform the client
-            res.json(`${req.method} request received `);
-
-            // Log our request to the terminal
-            console.info(`${req.method} request received `);
-        });
-
-
+            // 3. Write the new array into the db.json file
+            fs.writeFile('./db/db.json',
+                JSON.stringify(parsenote, null, 4),
+                (writeErr) =>
+                    writeErr
+                        ? console.error(writeErr)
+                        : console.info('Successfully updated notes!'),
+            )
+            res.json(newnote)
+        }
     });
-    // DELETE 
- router.delete("/notes/:id", function (req, res) {
+
+
+
+
+
+
+
+    // res.json(array)//
+    router.get('/api/notes', (req, res) => {
+        // Inform the client
+        res.json(`${req.method} request received `);
+
+        // Log our request to the terminal
+        console.info(`${req.method} request received `);
+    });
+
+
+});
+// DELETE 
+router.delete("/notes/:id", function (req, res) {
     fs.readFile("db/db.json", "utf8", (err, data) => {
         if (err) throw err;
 
