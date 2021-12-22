@@ -31,6 +31,7 @@ router.post("/notes", (req, res) => {
             //Create variable = JSON.parse(data) so that we can use it as a JS object (array)//
             const parsenote = JSON.parse(data);
             console.log(data);
+            newnote.id = parsenote.length;
             // Add a new review
             parsenote.push(newnote);
 
