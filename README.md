@@ -31,3 +31,5 @@ I also can delete each note and then when I click the note title in the left han
 *Node.js
 
 *Express
+------------------------------------------------
+Screenshot: notetake.jpg
