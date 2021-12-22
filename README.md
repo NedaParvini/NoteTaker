@@ -33,6 +33,6 @@ I also can delete each note and then when I click the note title in the left han
 *Express
 
 
+## Screenshot:
 
-------------------------------------------------
 ![Screenshot](notetake.jpg) 
